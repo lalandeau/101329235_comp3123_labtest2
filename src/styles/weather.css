@@ -1,0 +1,59 @@
+.Weather {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.info {
+  text-align: left;
+  display: flex;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.list {
+  font-size: 0.90rem;
+  list-style: none;
+  margin-left: 0.75rem;
+}
+
+.temp {
+  font-size: 3rem;
+  margin-bottom: -0.6rem;
+  transition: scale 0.3s, padding-left 0.3s;
+}
+
+.temp:hover {
+  scale: 1.5;
+  padding-left: 0.75rem;
+}
+
+.temp-sym {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.other-info {
+  text-align: right;
+}
+
+.other-city {
+  font-size: 1.17rem;
+  margin-bottom: 1rem;
+  color: bisque;
+  text-shadow: 2px 2px black;
+}
+
+.other-clouds {
+  font-weight: 0.5em;
+  font-size: 0.9rem;
+  color: rgb(113, 232, 193);
+  text-shadow: 2px 2px black;
+}
+
+.Weather {
+  padding: 0 0 1.5rem 0;
+}

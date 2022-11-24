@@ -1,0 +1,21 @@
+.Header {
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family:'Courier New', Courier, monospace ;
+  text-shadow: 2px 2px #FF0000;;
+}
+
+@media (max-width: 375px) {
+  .Header {
+    padding: 2rem;
+  }
+}
