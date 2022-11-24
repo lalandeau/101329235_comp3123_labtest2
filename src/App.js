@@ -4,11 +4,11 @@ import Header from "./components/header";
 import WeatherAndForecast from "./components/wfPage";
 import Footer from "./components/footer";
 import Loader from "./components/loaderPage";
-import Warning from "./components/mesPage";
+import Message from "./components/mesPage";
 
-import getAddressOfCoordinates from "./api/reverseGeocoding";
-import getCoordinatesOfAddress from "./api/forwardGeocoding";
-import getWeatherAndForecast from "./api/weatherAndForecast";
+import getadd_coord from "./api/reverseGeocoding";
+import get_coord from "./api/forwardGeocoding";
+import getWeFore from "./api/weatherAndForecast";
 
 import "./styles/App.css";
 
@@ -25,13 +25,12 @@ function App() {
 
   function error() {
     setContentState("warning");
-    setTimeout(() => setContentState("blank"), 3000);
   }
 
   useEffect(() => {
     function loc_req(position) {
       setContentState("loading");
-      getAddressOfCoordinates(
+      getadd_coord(
         position.coords.latitude,
         position.coords.longitude
       )
@@ -67,7 +66,7 @@ function App() {
     if (add === "") return;
 
     setContentState("loading");
-    getCoordinatesOfAddress(add)
+    get_coord(add)
       .then((res) => {
         if (
           res.data.results.length === 0 ||
@@ -92,7 +91,7 @@ function App() {
   useEffect(() => {
     if (Object.keys(coor).length === 0) return;
 
-    getWeatherAndForecast(coor)
+    getWeFore(coor)
       .then((res) => {
         setWeatherAndForecastInfo(res.data);
         setContentState("weatherAndForecast");
@@ -103,7 +102,7 @@ function App() {
   const app_main = {
     blank: () => null,
     loading: () => <Loader />,
-    warning: () => <Warning />,
+    warning: () => <Message />,
     weatherAndForecast: () => (
       <WeatherAndForecast
         weatherInfo={weatherinfo}

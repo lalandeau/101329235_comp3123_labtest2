@@ -4,7 +4,7 @@ import "../styles/footer.css";
 function Footer() {
   return (
     <footer className="Footer">
-      <p>&copy; Ellyn Bibon</p>
+      <p>&copy; Ellyn Bibon </p>
     </footer>
   );
 }
