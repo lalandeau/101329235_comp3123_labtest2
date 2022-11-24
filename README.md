@@ -9,3 +9,6 @@
 
 - error/mistyped location:
 <img width="462" alt="Screen Shot 2022-11-23 at 7 51 09 PM" src="https://user-images.githubusercontent.com/78584363/203670656-d3b80604-a9f1-4b19-a554-3d7c8441ff3a.png">
+
+- postman 
+<img width="999" alt="Screen Shot 2022-11-23 at 9 08 52 PM" src="https://user-images.githubusercontent.com/78584363/203678490-2e193b6f-6463-47c6-8728-7cf71f7a420b.png">
